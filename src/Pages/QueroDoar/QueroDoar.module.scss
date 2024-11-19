@@ -1,0 +1,146 @@
+.doados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: .8rem;
+
+  p {
+    font-size: 2.4rem;
+    line-height: 2.905rem;
+    font-weight: 400;
+  }
+}
+
+.boxForm {
+  border: 0.3rem solid #005695;
+  width: 44.2rem;
+  height: 59.8rem;
+  border-radius: 1rem;
+  padding: 8rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6.3rem;
+}
+
+.bookTitle {
+  display: flex;
+  align-items: center;
+  gap: 3.8rem;
+  width: 100%;
+
+  h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.905rem;
+    color: #005695;
+  }
+}
+
+.formDoados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  div {
+    border: 0.2rem solid #005695;
+    width: 100%;
+    height: 4.2rem;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    
+    input[type="text"] {
+      position: relative;
+      border: none;
+      background-color: transparent;
+      outline: none;
+      height: 4.2rem;
+    }
+
+    label {
+      color: #000;
+      font-weight: 400;
+      font-family: "Inter", sans-serif;
+      font-size: 1.4rem;
+      line-height: 1.694rem;
+      position: absolute;
+    }
+  }
+}
+
+.formDoados {
+  input {
+    background-color: #005695;
+    border: none;
+    border-radius: 1rem;
+    width: 19.5rem;
+    height: 5.3rem;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.42rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (width <= 768px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .doados {
+    width: 100%;
+    padding: 0 2rem;
+    gap: 3rem;
+
+    p {
+      font-size: 1.8rem;
+      line-height: 2.178rem;
+      text-align: center;
+    }
+  }
+
+  .boxForm {
+    width: 100%;
+    height: 44.2rem;
+    padding: 4rem 3rem;
+  }
+
+  .bookTitle {
+    gap: 3rem;
+
+    img {
+      width: 4rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      line-height: 2.42rem;
+    }
+  }
+
+  .formDoados {
+    gap: 2rem;
+
+    div {
+      height: 3rem;
+
+      input {
+        height: 3rem;
+      }
+
+      label {
+        font-size: 1.4rem;
+        line-height: 1.694rem;
+      }
+    }
+  }
+}
