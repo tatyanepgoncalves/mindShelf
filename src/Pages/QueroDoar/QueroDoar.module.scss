@@ -39,55 +39,70 @@
   }
 }
 
+
 .formDoados {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
 
-  div {
-    border: 0.2rem solid #005695;
+ div {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  position: relative;
+  
+  input {
     width: 100%;
-    height: 4.2rem;
-    border-radius: 1.5rem;
-    display: flex;
-    align-items: center;
-    padding-left: 3rem;
-    
-    input[type="text"] {
-      position: relative;
-      border: none;
-      background-color: transparent;
-      outline: none;
-      height: 4.2rem;
-    }
+    border: 0.2rem solid #005695;
+    border-radius: 2rem;
+    padding: 1rem 0 1rem 3rem;
+    outline: none;
+    font-size: 1.4rem;
+    line-height: 1.694rem;
 
-    label {
-      color: #000;
-      font-weight: 400;
-      font-family: "Inter", sans-serif;
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+      transform: translateY(-3rem);
       font-size: 1.4rem;
-      line-height: 1.694rem;
-      position: absolute;
+      color: #000;
     }
   }
+
+  label {
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+    font-size: 1.6rem;
+    color: #000;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+ }
+ 
 }
 
 .formDoados {
-  input {
+  input[type="submit"] {
     background-color: #005695;
-    border: none;
-    border-radius: 1rem;
-    width: 19.5rem;
-    height: 5.3rem;
     color: #fff;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+    border: none;
+    width: 50%;
+    padding: 1.5rem 0;
+    border-radius: 1rem;
     font-size: 2rem;
-    line-height: 2.42rem;
-    cursor: pointer;
+    line-height: 2.4rem;
+    transition: border .5s, color .5s, background-color .5s, box-shadow .5s;
+
+    &:hover {
+      background-color: transparent;
+      border: .2rem solid #005695;
+      color: #005695;
+      box-shadow: 0 0 .8rem #005695;
+    }
   }
 }
+
 
 @media screen and (width <= 768px) {
   * {
