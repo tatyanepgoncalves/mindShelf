@@ -88,37 +88,46 @@
   transition: 0.3s;
 }
 
-@media screen and (width <= 768px) {
+
+@media (width >= 320px) and (width <= 768px){
   .header {
-    width: 100%;
-    display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 2.5rem 0;
+    padding: 2rem 0;
+    gap: 2rem 0;
   }
 
   .logo {
-    display: flex;
-    gap: 0.8rem;
-    margin-bottom: 2rem;
+    gap: 1rem;
 
     img {
-      width: 4rem;
+      width: 10vw;
     }
 
     h1 {
-      font-size: 2.2rem;
-      line-height: 2.663rem;
+      font-size: 2.5rem;
     }
   }
 
   .menu {
+    gap: 1rem;
     ul {
-      gap: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      li {
+        a {
+          font-size: 1.4rem;
+        }
+      }
     }
-
   }
+}
 
+@media (width <= 999px) {
   .inputBox {
     display: none;
   }
