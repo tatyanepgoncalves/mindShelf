@@ -2,6 +2,7 @@
 import Book from "../../assets/images/book.png";
 import D from "./QueroDoar.module.scss";
 
+
 export default function QueroDoar() {
   
 
@@ -20,7 +21,7 @@ export default function QueroDoar() {
 
         <form className={D.formDoados}>
           <div>
-            <input type="text" id="title" placeholder=" " />
+            <input type="text" id="title"  />
             <label htmlFor="title">Título</label>
           </div>
 
