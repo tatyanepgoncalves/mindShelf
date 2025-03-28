@@ -12,7 +12,7 @@ export default function Header() {
     <BrowserRouter>
       <header className={H.header}>
         <section className={H.logo}>
-          <img src={ImageLogo} alt="Livro aberto" />
+          <img src={ImageLogo} alt="Livro aberto" loading="lazy" />
           <h1>Livros Vai na Web</h1>
         </section>
       
@@ -30,8 +30,7 @@ export default function Header() {
           </ul>
 
           <div className={H.inputBox}>
-            <input type="text" id="input" />
-            <label htmlFor="input">O que você procura?</label>
+            <input type="text" id="input" placeholder="O que você procura?" />
             <img src={BuscaIcon} alt="Busca" className="icon" />
           </div>
         </nav>

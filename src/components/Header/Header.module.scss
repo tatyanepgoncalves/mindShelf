@@ -1,134 +1,135 @@
-
-
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 3rem 2rem;
   background: linear-gradient(90deg, rgba(0,27,47,1) 0%, rgba(0,86,149,1) 88%);
-  color: #fff;
   width: 100%;
-  max-width: 100%;
+  max-width: 100vw;
+  color: #fff;
 }
 
-.logo {
+.header, .logo, .menu ul  {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
-
-  h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 3.631rem;
-    font-family: "Inter", sans-serif;
-  }
 }
 
 .menu {
-  display: flex;
-  align-items: center;
-  gap: 14rem;
-
   ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 3rem; 
-
     li {
       a {
         color: #fff;
-        font-family: "Inter", sans-serif;
-        font-size: 2rem;
-        line-height: 2.42rem;
-        font-weight: 400;
+        transition: all 0.5s;
+      }
+
+      a:hover {
+        border-bottom: 1px solid #fff;
       }
     }
   }
 }
 
 .inputBox {
-  position: relative;
-  margin-bottom: 1.6rem;
-  
-  label {
-    font-family: "Inter", sans-serif;
-    font-size: 2rem;
-    line-height: 2.42rem;
-    left: 3rem;
-    translate: 0 -50%;
-    padding: 4px 8px;
-  }
-  
-  img {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    z-index: 2;
-  }
-
-  input {
-    height: 5.6rem;
-    width: 33rem;
-    padding-left: 4.8rem;
-    border: 0.2rem solid #fff;
-    border-radius: 2rem;
-    background-color: transparent;
-    transition: 0.3s;
-  }
+  display: none;
 }
 
-.inputBox :is(label, span) {
-  position: absolute;
-  top: 50%;
-  translate: 0 -50%;
-  pointer-events: none;
-  color: #fff;
-  transition: 0.3s;
-}
-
-
-@media (width >= 320px) and (width <= 768px){
+@media screen and (width >= 20rem) and (width < 48rem) {
   .header {
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 2rem 0;
-    gap: 2rem 0;
+    padding: 1rem 1.125rem;
+    gap: 1rem;
   }
 
   .logo {
     gap: 1rem;
 
     img {
-      width: 10vw;
+      width: 100%;
+      max-width: 30px;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
+      line-height: 1.4;
     }
   }
 
   .menu {
-    gap: 1rem;
     ul {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       gap: 1rem;
 
       li {
         a {
-          font-size: 1.4rem;
+          font-size: 0.875rem;
+          line-height: 1.3;
         }
       }
     }
   }
 }
 
-@media (width <= 999px) {
-  .inputBox {
-    display: none;
+@media (width >= 48rem) and (width < 64rem) {
+  .header {
+    // flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem;
+    gap: 1.5rem;
+  }
+
+  .logo {
+    gap: 1.5rem;
+
+    img {
+      width: 20%;
+      max-width: 100%;
+    }
+    h1 {
+      font-size: 1.75rem;
+      line-height: 1.7;
+    }
+  }
+
+  .menu {
+    ul {
+      gap: 1.5rem;
+
+      li {
+        a {
+          font-size: 1.125rem;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 64rem) {
+  .header {
+    justify-content: space-between;
+    padding: 2.5rem 5rem;
+  }
+
+  .logo {
+    gap: 2rem;
+
+    img {
+      width: 100%;
+      max-width: 5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.7;
+    }
+  }
+
+  .menu {
+    ul {
+      gap: 2rem;
+
+      li {
+        a {
+          font-size: 1.125rem;
+          line-height: 1.6;
+        }
+      }
+    }
   }
 }
