@@ -1,177 +1,179 @@
-.doados {
+.doados,
+.boxForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 2rem 0;
-  gap: 1rem;
-
-  p {
-    font-size: 2.4rem;
-    line-height: 2.905rem;
-    font-weight: 400;
-  }
 }
 
 .boxForm {
   border: 0.3rem solid #005695;
-  width: 50rem;
-  height: 53rem;
-  border-radius: 1rem;
-  padding: 5rem 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  box-shadow: 0 0.063rem 0.25rem rgba(0, 86, 149, 0.5);
 }
 
 .bookTitle {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 3.8rem;
-  width: 100%;
-
-  h2 {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 2.4rem;
-    line-height: 2.905rem;
-    color: #005695;
-  }
 }
-
 
 .formDoados {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
 
- div {
-  background-color: transparent;
-  border: none;
-  width: 100%;
-  position: relative;
-  
-
-}
-
-}
-.formDoados {
- div {
   input {
-    width: 100%;
     border: 0.2rem solid #005695;
-    border-radius: 2rem;
-    padding: 1.5rem 0 1.5rem 3rem;
-    outline: none;
-    font-size: 1.4rem;
-    line-height: 1.694rem;
-    background-color: transparent;
-
-    &:focus + label {
-      transform: translateY(-1.5rem);
-      font-size: 1.6rem;
-      color: #000;
-      background-color: #fafafa;
-      translate: 0 -50%;
-    }
   }
-  
-}
 
-}
-
-.formDoados {
-  div {
-    label {
-      position: absolute;
-      border-radius: 2rem;
-      left: 2.5rem;
-      top: 1.5rem;
-      font-size: 1.6rem;
-      color: #000;
-      pointer-events: none;
-      transition: all 0.3s ease;
-      padding: 0 .5rem;
-    }
-  }
-}
-
-
-.formDoados {
   input[type="submit"] {
     background-color: #005695;
-    color: #fff;
-    border: none;
-    width: 50%;
-    padding: 1.5rem 0;
-    border-radius: 1rem;
-    font-size: 2rem;
-    line-height: 2.4rem;
-    transition: border .5s, color .5s, background-color .5s, box-shadow .5s;
-
-    &:hover {
-      background-color: transparent;
-      border: .2rem solid #005695;
-      color: #005695;
-      box-shadow: 0 0 .8rem #005695;
-    }
+    border: 0.2rem solid #005695;
+    color: #fafafa;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  input[type="submit"]:hover {
+    background-color: transparent;
+    color: #005695;
   }
 }
 
-
-@media screen and (width <= 768px) {
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
+@media screen and (width >= 20rem) and (width < 48rem) {
   .doados {
-    width: 100%;
-    padding: 0 2rem;
-    gap: 3rem;
+    padding: 5.5rem;
+    text-align: center;
+    gap: 2rem;
+    
 
     p {
-      font-size: 1.8rem;
-      line-height: 2.178rem;
-      text-align: center;
+      font-size: 1rem;
+      line-height: 1.5;
     }
   }
 
   .boxForm {
-    width: 100%;
-    height: 44.2rem;
-    padding: 4rem 3rem;
+    padding: 3rem;
+    border-radius: 0.625rem;
+    gap: 2rem;
+    width: 70vw;
   }
 
   .bookTitle {
-    gap: 3rem;
+    gap: 0.5rem;
 
     img {
-      width: 4rem;
+      width: 32px;
     }
 
     h2 {
-      font-size: 2rem;
-      line-height: 2.42rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
     }
   }
 
   .formDoados {
-    gap: 2.5rem;
+    gap: 2rem;
 
-    div {
-      
-      input {
-        padding: 1rem;
-      }
-
-      label {
-        font-size: 1.4rem;
-        line-height: 1.694rem;
-      }
+    input {
+      width: 130%;
+      border-radius: 0.625rem;
+      padding: 0.5rem 2rem;
     }
+
+    input[type="submit"] {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+@media (width >= 48rem) and (width < 64rem) {
+  .doados {
+    padding: 6rem 0;
+    gap: 4rem;
+
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  .boxForm {
+    padding: 2rem 4rem;
+    border-radius: 0.5rem;
+    gap: 1.25rem;
+  }
+
+  .bookTitle {
+    gap: 0.5rem;
+
+    img {
+      width: 48px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      line-height: 1.6;
+    }
+  }
+
+  .formDoados {
+    gap: 1rem;
+
+    input {
+      width: 170%;
+      border-radius: 0.625rem;
+      padding: 0.5rem 2rem;
+    }
+
+    input[type="submit"] {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+
+@media (width >= 64rem) {
+  .doados {
+    padding: 4rem;
+    gap: 3rem;
+
+    p {
+      font-size: 1.8rem;
+      line-height: 1.6;
+    }
+  }
+
+  .bookTitle {
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .boxForm {
+    gap: 3rem;
+    padding: 3rem 8rem;
+    border-radius: 0.5rem;
+
+    input {
+      width: 150%;
+      border-radius: 0.8rem;
+      padding: 0.5rem 2rem;
+    }
+  }
+
+  .bookTitle {
+    gap: 1rem;
+
+    img {
+      width: 48px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      line-height: 1.8;
+    }
+  }
+
+  .formDoados {
+    gap: 2rem;
   }
 }
