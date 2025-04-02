@@ -1,84 +1,42 @@
-import Book from "../../assets/images/livro.png";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Do from "./Doados.module.scss";
 
+
 export default function Doados() {
+  const [livros, setLivros] = useState([]);
+
+  const getLivros = async () => {
+    const response =  await axios.get("https://api-library-wgk2.onrender.com/list-livros")
+
+    setLivros(response.data)
+    console.log(response.data)
+  }
+
+  useEffect(() => {
+    getLivros()
+  }, [])
+
   return (
     <section className={Do.livrosDoados}>
       <h2>Livros Doados</h2>
 
+      
       <div className={Do.List}>
-        <div className={Do.listItem}>
-          <img src={Book} alt="Livro" />
 
-          <div>
-            <p>Título do Livro</p>
-            <p>Autor do Livro</p>
-            <p>Categoria do Livro</p>
-          </div>
-        </div>
-        
-        <div className={Do.listItem}>
-          <img src={Book} alt="Livro" />
+        {livros.map((item) => {
+          return (
+            <article key={item.id}>
+              <img src={item.image_url} alt={item.title} />
 
-          <div>
-            <p>Título do Livro</p>
-            <p>Autor do Livro</p>
-            <p>Categoria do Livro</p>
-          </div>
-        </div>
-        
-        <div className={Do.listItem}>
-          <img src={Book} alt="Livro" />
-
-          <div>
-            <p>Título do Livro</p>
-            <p>Autor do Livro</p>
-            <p>Categoria do Livro</p>
-          </div>
-        </div>
-        
-        <div className={Do.listItem}>
-          <img src={Book} alt="Livro" />
-
-          <div>
-            <p>Título do Livro</p>
-            <p>Autor do Livro</p>
-            <p>Categoria do Livro</p>
-          </div>
-        </div>
-        
-        <div className={Do.listItem}>
-          <img src={Book} alt="Livro" />
-
-          <div>
-            <p>Título do Livro</p>
-            <p>Autor do Livro</p>
-            <p>Categoria do Livro</p>
-          </div>
-        </div>
-        
-        <div className={Do.listItem}>
-          <img src={Book} alt="Livro" />
-
-          <div>
-            <p>Título do Livro</p>
-            <p>Autor do Livro</p>
-            <p>Categoria do Livro</p>
-          </div>
-        </div>
-        
-        <div className={Do.listItem}>
-          <img src={Book} alt="Livro" />
-
-          <div>
-            <p>Título do Livro</p>
-            <p>Autor do Livro</p>
-            <p>Categoria do Livro</p>
-          </div>
-        </div>
-
-       
-
+              <div className={Do.info}>
+                <h3>{item.title}</h3>
+                <span>{item.category}</span>
+                <p>{item.author}</p>
+              </div>
+            </article>
+          )
+        })}
       </div>
     </section>
   );
