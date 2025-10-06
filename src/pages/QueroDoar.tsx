@@ -1,10 +1,11 @@
 import Header from "@/components/shared/Header";
 
-export default function Home() {
+
+export default function QueroDoar() {
   return (
     <div>
       <Header />
-      Home
+      QueroDoar
     </div>
   )
 }

@@ -1,10 +1,11 @@
 import Header from "@/components/shared/Header";
 
-export default function Home() {
+
+export default function LivrosDoados() {
   return (
     <div>
       <Header />
-      Home
+      LivrosDoados
     </div>
   )
 }
